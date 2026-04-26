@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroClaw - Agent Succession Interface</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ZeroClaw Succession Protocol</h1>
+            <div class="status-badge" id="statusBadge">Status: Loading...</div>
+        </header>
+
+        <div class="grid">
+            <section class="panel">
+                <h2>Agent Details</h2>
+                <div class="info-row">
+                    <span>Current Version:</span>
+                    <strong id="agentVersion">v--</strong>
+                </div>
+                <div class="info-row">
+                    <span>Experiences Gathered:</span>
+                    <strong id="experienceCount">0</strong>
+                </div>
+                <div class="info-row">
+                    <span>Global Dataset Size:</span>
+                    <strong id="datasetSize">0</strong>
+                </div>
+                
+                <div class="controls">
+                    <h3>Simulate Activity</h3>
+                    <input type="text" id="actionInput" placeholder="Enter an action to perform...">
+                    <button id="btnLearn" class="btn primary">Execute & Learn</button>
+                </div>
+                
+                <div class="controls mt-2">
+                    <h3>Lifecycle Management</h3>
+                    <button id="btnSuccession" class="btn danger">Trigger Succession Protocol</button>
+                    <p class="help-text">Initiates dataset generation, fine-tuning, and agent replacement.</p>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Agent Terminal logs</h2>
+                <div class="terminal" id="terminalLogs">
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
